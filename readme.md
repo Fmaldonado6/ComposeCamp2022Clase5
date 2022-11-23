@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-    <img src="./assets/logo.png"  alt="Logo" width="100px" >
+    <img src="./assets/logo.png"  alt="Logo" width="150px" >
 
   <h2 align="center">Compose Camp 2022: Conexión a Internet</23>
 
