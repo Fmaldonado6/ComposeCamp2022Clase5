@@ -1,4 +1,4 @@
-package com.fmaldonado.internetconnection.network
+package com.fmaldonado.internetconnection.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

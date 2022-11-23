@@ -19,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.fmaldonado.internetconnection.network.ApiModel
+import com.fmaldonado.internetconnection.models.ApiModel
 
 @Composable
 fun HomeScreen(

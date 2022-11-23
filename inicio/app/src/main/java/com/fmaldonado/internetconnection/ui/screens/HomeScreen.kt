@@ -1,23 +1,18 @@
 package com.fmaldonado.internetconnection.ui.screens
 
-import android.provider.ContactsContract.Contacts.Photo
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
-import coil.request.ImageRequest
-import com.fmaldonado.internetconnection.network.ApiModel
+import com.fmaldonado.internetconnection.models.ApiModel
 
 @Composable
 fun HomeScreen(
@@ -28,17 +23,26 @@ fun HomeScreen(
 
 @Composable
 fun SuccessScreen(photos: List<ApiModel>, modifier: Modifier = Modifier) {
-
+    LazyVerticalGrid(
+        columns = GridCells.Adaptive(150.dp),
+        modifier = modifier.fillMaxWidth(),
+        contentPadding = PaddingValues(4.dp)
+    ) {
+        items(items = photos) { photo ->
+            PhotoCard(photo = photo)
+        }
+    }
 }
 
 @Composable
 fun PhotoCard(photo: ApiModel, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
-            .padding(4.dp)
+            .padding(10.dp)
             .fillMaxWidth()
             .aspectRatio(1f),
         elevation = 8.dp,
+        shape = RoundedCornerShape(20.dp)
     ) {
 
     }

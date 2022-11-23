@@ -1,5 +1,6 @@
 package com.fmaldonado.internetconnection.network
 
+import com.fmaldonado.internetconnection.models.ApiModel
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
