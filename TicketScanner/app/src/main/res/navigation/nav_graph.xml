@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scannerFragment">
+    <fragment
+        android:id="@id/scannerFragment"
+        android:name="com.drongo.scanner.ui.activities.main.fragments.scanner.ScannerFragment"
+        android:label="scanner_fragment"
+        tools:layout="@layout/fragment_scanner" />
+    <fragment
+        android:id="@id/settingsFragment"
+        android:name="com.drongo.scanner.ui.activities.main.fragments.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

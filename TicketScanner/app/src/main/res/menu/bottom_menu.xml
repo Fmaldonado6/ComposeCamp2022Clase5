@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/scannerFragment"
+        android:enabled="true"
+        android:icon="@drawable/scanner_icon"
+        android:title="@string/scanner_label" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/settings_label" />
+</menu>

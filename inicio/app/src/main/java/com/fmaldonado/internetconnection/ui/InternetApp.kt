@@ -41,7 +41,8 @@ fun InternetApp(modifier: Modifier = Modifier) {
                 .padding(it),
             color = MaterialTheme.colors.background
         ) {
-            HomeScreen()
+            val viewModel: HomeViewModel = viewModel()
+            HomeScreen(uiState = viewModel.homeUiState)
         }
     }
 

@@ -47,26 +47,6 @@ fun SuccessScreen(photos: List<ApiModel>, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun LoadingScreen(modifier: Modifier = Modifier) {
-    Box(
-        contentAlignment = Alignment.Center,
-        modifier = modifier.fillMaxSize()
-    ) {
-        CircularProgressIndicator()
-    }
-}
-
-@Composable
-fun ErrorScreen(modifier: Modifier = Modifier) {
-    Box(
-        contentAlignment = Alignment.Center,
-        modifier = modifier.fillMaxSize()
-    ) {
-        Text("Ocurrió un error")
-    }
-}
-
-@Composable
 fun PhotoCard(photo: ApiModel, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
@@ -87,4 +67,26 @@ fun PhotoCard(photo: ApiModel, modifier: Modifier = Modifier) {
         )
     }
 }
+
+
+@Composable
+fun LoadingScreen(modifier: Modifier = Modifier) {
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = modifier.fillMaxSize()
+    ) {
+        CircularProgressIndicator()
+    }
+}
+
+@Composable
+fun ErrorScreen(modifier: Modifier = Modifier) {
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = modifier.fillMaxSize()
+    ) {
+        Text("Ocurrió un error")
+    }
+}
+
 

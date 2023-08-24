@@ -11,14 +11,23 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.fmaldonado.internetconnection.models.ApiModel
 
 @Composable
 fun HomeScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    uiState:HomeUiState,
 ) {
-
+    when(uiState){
+        is HomeUiState.Loading -> LoadingScreen()
+        is HomeUiState.Error -> ErrorScreen()
+        is HomeUiState.Success -> SuccessScreen(photos = uiState.list)
+    }
 }
 
 @Composable
@@ -44,6 +53,16 @@ fun PhotoCard(photo: ApiModel, modifier: Modifier = Modifier) {
         elevation = 8.dp,
         shape = RoundedCornerShape(20.dp)
     ) {
+
+        AsyncImage(
+            model = ImageRequest.Builder(context = LocalContext.current)
+                .data(photo.imgSrc)
+                .crossfade(true)
+                .build()
+            ,
+            contentDescription = "Imagen",
+            contentScale = ContentScale.FillBounds
+        )
 
     }
 }
